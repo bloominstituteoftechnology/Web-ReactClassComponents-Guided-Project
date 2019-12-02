@@ -8,6 +8,7 @@ const todoList = [
 
 export default function Todos(props) {
   const [todos, setTodos] = useState(todoList);
+
   const markTodo = (id, isComplete) => event => {
     // markTodo needs to return a function that takes an event,
     // so we can attach it to a click handler in the JSX
@@ -16,6 +17,7 @@ export default function Todos(props) {
       return { id: todo.id, name: todo.name, complete: isComplete };
     }));
   };
+
   return (
     <div className='component'>
       {

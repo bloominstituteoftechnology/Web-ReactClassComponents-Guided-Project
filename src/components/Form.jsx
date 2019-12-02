@@ -18,12 +18,12 @@ export default class Form extends React.Component {
     // AND the value
     const { name, value } = event.target;
 
-    this.setState({
+    this.setState(oldState => ({
       formValues: {
-        ...this.state.formValues,
+        ...oldState.formValues,
         [name]: value,
       },
-    });
+    }));
   }
 
   onFormSubmit = (event) => {
